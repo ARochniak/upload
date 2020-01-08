@@ -1,0 +1,61 @@
+.files-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.files-list__li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 0 5px;
+
+  border-bottom: 1px solid #3866a3;
+}
+
+.files-list__li:last-child {
+  padding-bottom: 0;
+
+  border-bottom: none;
+}
+
+.files-list__li__first {
+  width: 50%;
+}
+
+.files-list__li__close {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+
+  opacity: 0.3;
+}
+
+.files-list__li__close:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.files-list__li__close::before,
+.files-list__li__close::after {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 2px;
+  background-color: #333333;
+}
+
+.files-list__li__close::before {
+  transform: rotate(45deg);
+}
+
+.files-list__li__close::after {
+  transform: rotate(-45deg);
+}

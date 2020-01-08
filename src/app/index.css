@@ -1,0 +1,18 @@
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding-top: 10vh;
+
+  background-image: linear-gradient( 109.6deg,  rgba(204,228,247,1) 11.2%, rgba(237,246,250,1) 100.2% );
+}
+
+.app__wrapper {
+  width: 50vw;
+  padding: 10px;
+
+  border: 1px solid #babaf8;
+  border-radius: 8px;
+}
