@@ -13,6 +13,14 @@ const SubmitForm = ({ files, setFiles }) => {
     }
     return array;
   };
+  const submitHandler = e => {
+    onUpload(e, files).then(res => {
+      if (res) {
+        alert('Files uploaded');
+        setFiles([]);
+      } else alert('files were not sent');
+    });
+  };
   const fileChangeHandler = e => {
     const selectedFiles = fileListToArray(e.target.files);
     setFiles([...files, ...selectedFiles]);
@@ -21,12 +29,7 @@ const SubmitForm = ({ files, setFiles }) => {
     inputFile.current.click();
   };
   return (
-    <form
-      onSubmit={e => {
-        onUpload(e, files);
-      }}
-      className="upload-form"
-    >
+    <form onSubmit={submitHandler} className="upload-form">
       <input
         type="file"
         multiple

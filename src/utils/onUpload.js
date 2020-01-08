@@ -10,6 +10,7 @@ const onUpload = async (e, files) => {
       method: 'POST',
       body: formData
     });
+    return response.ok;
   } catch (error) {
     console.error('Ошибка:', error);
   }
